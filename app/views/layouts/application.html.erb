@@ -1,7 +1,10 @@
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>ProjecktDB</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +13,27 @@
   </head>
 
   <body>
+
+    <h1> Projekt  DB</h1>
+
+    <header>
+
+      <nav>
+
+        <% if @current_user.present? %>
+           Welcome, <%= @current_user.name %>
+           <%= link_to 'Logout',login_path, method: 'delete' %>
+         <% else %>
+           <%= link_to 'Login',login_path  %>
+           <%= link_to 'Sign Up', new_user_path %>
+         <% end %>
+         </nav>
+
+         <hr>
+
+  </header>
     <%= yield %>
+    <hr>
+
   </body>
 </html>
