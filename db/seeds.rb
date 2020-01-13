@@ -7,4 +7,4 @@ User.destroy_all
     puts "Created #{ User.count } users  "
 
 
-    puts "User #{  User.first.name} has projects: #{   User.first.projects.pluck(:name).join (', ') }"
+    puts "User #{  User.first.name} has projects: #{   User.first.projects.pluck(:title).join (', ') }"
