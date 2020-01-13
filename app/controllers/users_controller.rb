@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-before_action :check_if_logged_in, except: [ :new ]
+before_action :check_if_logged_in, except: [ :new, :create ]
 
 before_action :check_if_admin, only: [ :index ]
 
@@ -8,6 +8,7 @@ before_action :check_if_admin, only: [ :index ]
 
   def new
     @user = User.new
+
   end
 
   def create
