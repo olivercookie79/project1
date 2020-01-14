@@ -36,7 +36,7 @@ before_action :check_if_admin, only: [ :index ]
 
     redirect_to login_path unless @current_user.present?
 
-    @user = User.find params[:id]
+    @user = @current_user # always show the logged-in user on this show page
   end
 
   def edit

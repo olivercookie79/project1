@@ -4,7 +4,13 @@ User.destroy_all
   u2 = User.create! name: 'Luke', email: 'Luke@ga.co', password:'chicken'
   u3 = User.create! name: 'Nookie', email: 'nooknook@ga.co', password:'chicken'
 
-    puts "Created #{ User.count } users  "
+  puts "Created #{ User.count } users  "
+
+  Project.destroy_all
+
+  p1 = Project.create! title: 'Test1', user_id: u1.id
+  p2 = Project.create! title: 'Test2', user_id: u1.id
+  p3 = Project.create! title: 'Test3', user_id: u2.id
 
 
-    puts "User #{  User.first.name} has projects: #{   User.first.projects.pluck(:title).join (', ') }"
+  puts "User #{  User.first.name} has projects: #{   User.first.projects.pluck(:title).join (', ') }"

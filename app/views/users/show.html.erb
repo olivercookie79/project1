@@ -1,7 +1,12 @@
 <h2>  Projects Page for  <%= @user.name %></h2>
 
 Your Current Projects
-<br>
-<br>
 
-+Create New Project <%=  %>
+<ul>
+<% @user.projects.each do |project| %>
+     <li><%= link_to project.title, project_path(project.id) %></li>
+<% end %>
+</ul>
+
+
+<%= link_to 'Add project', new_project_path %>
