@@ -20,7 +20,7 @@
         <% if @current_user.present? %>
            Welcome, <%= @current_user.name %>
            <%= link_to 'Logout',login_path, method: 'delete' %>
-           |
+           
            <%= link_to 'Dashboard',user_path(@current_user.id) %>
          <% else %>
            <%= link_to 'Login',login_path  %>

@@ -1,13 +1,18 @@
 class ProjectsController < ApplicationController
 
     def new
+
       @project = Project.new
+
     end
 
+    #CREATE
+
     def create
+
       Project.create project_params
 
-      redirect_to projects_path
+      redirect_to user_path(@current_user.id)
     end
 
     def index
@@ -31,9 +36,12 @@ class ProjectsController < ApplicationController
     def destroy
       Project.destroy params[:id]
 
+      redirect_to user_path(@current_project.id)
+
 
 
     end
+
     private
 
     def project_params
@@ -49,5 +57,5 @@ class ProjectsController < ApplicationController
   #   t.integer :user_id
   #   t.text :title
   #   t.text :image
-  # 
+  #
   #   t.timestamps
