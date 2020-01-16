@@ -2,10 +2,11 @@
   <%= @project.title %>
 </h2>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
 
 
 <ul class="revisions">
+<ul class="images">
 <% @project.revisions.reverse.each do |revision| %>
   <li><%= p revision.description  %></li>
 <% end %>
