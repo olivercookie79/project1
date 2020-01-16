@@ -16,12 +16,20 @@ class ProjectsController < ApplicationController
     end
 
     def index
+      # this gets all the projects from the database
       @projects = Project.all
     end
 
     def show
-      @project = Project.find params[:id]
+
+      @project = Project.find( params[:id] )
+
+      @revision = Revision.new
+
+
     end
+
+
 
     #UPDATE
     def edit
@@ -53,9 +61,16 @@ class ProjectsController < ApplicationController
   end
 
 
-  # create_table :projects do |t|
-  #   t.integer :user_id
-  #   t.text :title
-  #   t.text :image
-  #
-  #   t.timestamps
+
+
+# for(  let i = 0; i < dogs.length; i++ ){
+#
+#   const dog = dogs[i]
+# }
+# position: { lat: dog.latitude, lng: dog.longitude}
+# map: map,
+# title: dog.name
+# });
+#
+# }
+# var bounds - new  google.maps.latLngBounds

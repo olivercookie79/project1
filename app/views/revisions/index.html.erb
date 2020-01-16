@@ -1,0 +1,14 @@
+<h1>Revisions#index</h1>
+<p>Find me in app/views/revisions/index.html.erb</p>
+<h2>  Revisions (#INDEX)   Update revisions </h2>
+
+<ul>
+<% @revisions.each do |revision| %>
+     <!-- <li><%= project.title %></li> -->
+
+    <li>
+     <%= link_to project.title, project_path(project.id)%>
+     </li>
+
+<% end %>
+</ul>

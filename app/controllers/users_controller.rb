@@ -46,6 +46,8 @@ before_action :check_if_admin, only: [ :index ]
   end
 
   def destroy
+
+    # Option to Delete  User 
   end
 
   private

@@ -1,0 +1,15 @@
+<%= form_for @revision do |f| %>
+<%= f.label :notes %>
+<%= f.text_area :description %>
+<%= f.label :updated_at  %>
+<br>
+<%= f.label :image %>
+<%= f.text_field :image %>
+
+<%= f.hidden_field :project_id, :value => @project.id %>
+
+<br>
+
+<%= f.submit %>
+
+<% end %>

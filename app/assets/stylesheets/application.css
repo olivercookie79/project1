@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+font-family: 'Roboto Mono', monospace;
+
+ul.revisions {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.revisions li {
+  width: 45%;
+  border: 2px solid gray;
+  margin-bottom: 10px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -10px 10px 13px 0px rgba(0,0,0,0.4);
+
+
+
+  padding: 50px;
+}

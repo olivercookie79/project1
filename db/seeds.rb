@@ -8,9 +8,17 @@ User.destroy_all
 
   Project.destroy_all
 
-  p1 = Project.create! title: 'Test1', user_id: u1.id
+  p1 = Project.create! title: 'Test1', user_id: u1.id, image: ''
   p2 = Project.create! title: 'Test2', user_id: u1.id
   p3 = Project.create! title: 'Test3', user_id: u2.id
 
 
   puts "User #{  User.first.name} has projects: #{   User.first.projects.pluck(:title).join (', ') }"
+
+  Revision.destroy_all
+
+  r1 = Revision.create! description: 'Rev1', project_id: p1.id
+  r2 = Revision.create! description: 'Rev2', project_id: p1.id
+  r3 = Revision.create! description: 'Rev3', project_id: p2.id
+
+  puts "Project #{  Project.first.title} has revisions: #{   Project.first.revisions.pluck(:description).join (', ') }"
