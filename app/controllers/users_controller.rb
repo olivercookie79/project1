@@ -36,6 +36,7 @@ before_action :check_if_admin, only: [ :index ]
 
     redirect_to login_path unless @current_user.present?
 
+
     @user = @current_user # always show the logged-in user on this show page
   end
 
@@ -47,7 +48,7 @@ before_action :check_if_admin, only: [ :index ]
 
   def destroy
 
-    # Option to Delete  User 
+    # Option to Delete  User
   end
 
   private

@@ -1,17 +1,15 @@
 class ProjectsController < ApplicationController
 
     def new
-
       @project = Project.new
-
     end
 
     #CREATE
 
     def create
-
-      Project.create project_params
-
+      # p2 = Project.create project_params
+      p2 = Project.create title: params[:project][:title], user_id: @current_user.id
+      # raise 'hell'
       redirect_to user_path(@current_user.id)
     end
 
@@ -21,14 +19,9 @@ class ProjectsController < ApplicationController
     end
 
     def show
-
       @project = Project.find( params[:id] )
-
       @revision = Revision.new
-
-
     end
-
 
 
     #UPDATE
@@ -45,9 +38,6 @@ class ProjectsController < ApplicationController
       Project.destroy params[:id]
 
       redirect_to user_path(@current_project.id)
-
-
-
     end
 
     private
