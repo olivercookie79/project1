@@ -1,5 +1,5 @@
 <h2>Login</h2>
-
+<div  class ="lg">
 <% if flash[:error] %>
   <!-- Print out any error message for the user -->
   <br>
@@ -17,5 +17,5 @@
   <%= password_field_tag :password %>
   <br>
   <%= submit_tag 'Login' %>
-
+</div>
 <% end %>

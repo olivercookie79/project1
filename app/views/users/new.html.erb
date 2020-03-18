@@ -1,4 +1,8 @@
+
 <h2>Create New User Account</h2>
+
+
+
 
 <% if @user.errors.any? %>
   <p>Please correct the following errors:</p>
@@ -8,6 +12,8 @@
     <% end %>
   </ul>
 <% end %>
+
+<div class ="lg">
 
 
 <%=  form_for @user do |f| %>
@@ -28,6 +34,7 @@
 <br>
 
 
+
 <%= f.label :password_confirmation %>
 <%= f.password_field :password_confirmation %>
 <br>
@@ -37,6 +44,6 @@
 
 <%=  f.submit  'Sign up' %>
 
-
+</div>
 
 <% end %>

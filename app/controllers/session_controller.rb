@@ -1,9 +1,7 @@
 class SessionController < ApplicationController
   def new
 
-
-
-  end
+end
 
    def create
      #see if user exists in the users table database
@@ -33,3 +31,8 @@ class SessionController < ApplicationController
     redirect_to login_path
   end
 end
+
+  def destroy
+    session[:user_id] =nil # this logs out the user
+    redirect_to login_path
+    end

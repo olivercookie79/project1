@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjecktDB</title>
+    <title>Projeckt Tracker </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+
+
+
+    <%= stylesheet_link_tag 'application','https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text&display=swap', 'https://fonts.googleapis.com/css?family=Meera+Inimai&display=swap', media: 'all' %>
+
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
 
-    <h1> Projekt  DB</h1>
+<div class = "a">
+    <h1> Mind Tracker</h1>
 
     <header>
 
@@ -24,7 +29,7 @@
            <%= link_to 'Dashboard',user_path(@current_user.id) %>
          <% else %>
            <%= link_to 'Login',login_path  %>
-           <%= link_to 'Sign Up', new_user_path %>
+           <%= link_to 'SignUp', new_user_path %>
          <% end %>
          </nav>
 
@@ -36,8 +41,8 @@
     <%= yield %>
     <hr>
     <footer>
-    &copy; Productivity Addicts, 2020
+    &copy; Productivity Addicts 2020
 </footer>
-
+</div>
   </body>
 </html>
