@@ -12,12 +12,13 @@ header {
 }
 
 ul.revisions {
-  list-style-type: none;
+  list-style-type:decimal;
   padding-left: 0;
+
 }
 
 ul.revisions li {
-  width: 60%;
+  width: 90%;
   border: 2px solid gray;
   margin-bottom: 10px;
   border-radius: 8px 8px 8px 8px;
@@ -71,7 +72,7 @@ div.b{
 
   font-family:'Meera Inimai', sans-serif;
 
-  text-align: justify;
+  text-align:left;
 
 }
 div.cp{
@@ -90,4 +91,17 @@ div.lg{
    margin: 0 auto;
    margin-top: 30px;
    font-family:'Meera Inimai', sans-serif;
+}
+
+
+#addP {
+
+  max-width: 300px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-family:'Meera Inimai', sans-serif;
+
 }

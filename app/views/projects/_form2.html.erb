@@ -4,7 +4,7 @@
 <%= f.label :updated_at  %>
 <br>
 <%= f.label :image %>
-<%= f.text_field :image %>
+<%= f.file_field :image %>
 
 <%= f.hidden_field :project_id, :value => @project.id %>
 

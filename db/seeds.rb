@@ -16,7 +16,7 @@ User.destroy_all
 
   Revision.destroy_all
 
-  r1 = Revision.create! description: 'Rev1', project_id: p1.id, image: ''
+  r1 = Revision.create! description: 'Rev1', project_id: p1.id
   r2 = Revision.create! description: 'Rev2', project_id: p1.id
   r3 = Revision.create! description: 'Rev3', project_id: p2.id
 
